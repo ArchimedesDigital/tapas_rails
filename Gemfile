@@ -13,7 +13,7 @@ gem 'rubyzip'
 gem 'passenger', '5.0.15'
 
 # Use mysql2 for the staging environment
-gem 'mysql2', '0.3.16'
+gem 'mysql2', '0.5.3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -38,9 +38,6 @@ gem 'jbuilder', '~> 1.2'
 
 # Use Figaro to manage sensitive application configuration
 gem 'figaro'
-
-# Use CerberusCore as the basis for this project
-gem 'cerberus_core', git: "https://github.com/NEU-Libraries/cerberus_core.git", :branch => "master"
 
 # Use Resque to handle background tasks
 gem 'resque', :require => 'resque/server'
