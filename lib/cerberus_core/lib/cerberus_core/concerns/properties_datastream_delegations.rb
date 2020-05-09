@@ -10,7 +10,7 @@ module CerberusCore::Concerns::PropertiesDatastreamDelegations
     delegate :canonize, to: "properties"
     delegate :uncanonize, to: "properties"
     delegate :canonical?, to: "properties"
-    # Changed from has_attributes
+    # Changed from class_attribute
     class_attribute :depositor, :download_filename,
                    datastream: "properties",
                    multiple: false

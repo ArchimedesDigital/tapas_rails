@@ -20,8 +20,8 @@ class Collection < CerberusCore::BaseModels::Collection
 
   has_metadata :name => "mods", :type => ModsDatastream
   has_metadata :name => "properties", :type => PropertiesDatastream
-  has_attributes :title, datastream: "DC"
-  has_attributes :description, datastream: "DC"
+  class_attribute :title, datastream: "DC"
+  class_attribute :description, datastream: "DC"
 
   validates_presence_of :title
 

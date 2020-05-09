@@ -17,7 +17,7 @@ class CoreFile < CerberusCore::BaseModels::CoreFile
 
   before_save :ensure_unique_did, :calculate_drupal_access
 
-  has_and_belongs_to_many :collections, :property => :is_member_of,
+  has_and_belongs_to_many :collections,
     :class_name => 'Collection'
 
   has_many :page_images, :property => :is_page_image_for,
@@ -40,9 +40,9 @@ class CoreFile < CerberusCore::BaseModels::CoreFile
 
   has_metadata :name => "mods", :type => ModsDatastream
   has_metadata :name => "properties", :type => PropertiesDatastream
-  has_attributes :title, datastream: "DC"
-  has_attributes :description, datastream: "DC"
-  has_attributes :featured, :datastream => :properties, :multiple => false
+  class_attribute :title, datastream: "DC"
+  class_attribute :description, datastream: "DC"
+  class_attribute :featured, :datastream => :properties, :multiple => false
   delegate :authors, to: "mods"
   delegate :contributors, to: "mods"
 

@@ -45,7 +45,7 @@ gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.
 gem 'jbuilder', '2.10'
 
 # Use Figaro to manage sensitive application configuration
-# gem 'figaro'
+gem 'figaro'
 
 # Use Resque to handle background tasks
 gem 'resque', :require => 'resque/server'
@@ -54,7 +54,7 @@ gem 'resque', :require => 'resque/server'
 gem 'nest'
 
 # Use thor for command line tasks
-# gem 'thor', '1.0.1'
+gem 'thor', '~> 0.14'
 
 # Install thor-rails to write thor tasks that are rails env aware
 # gem 'thor-rails'

@@ -21,13 +21,13 @@ class Community < CerberusCore::BaseModels::Community
   has_metadata :name => "mods", :type => ModsDatastream
   has_metadata :name => "properties", :type => PropertiesDatastream
 
-  has_attributes :project_members, datastream: "properties", multiple: true
-  has_attributes :project_editors, datastream: "properties", multiple: true
-  has_attributes :project_admins, datastream: "properties", multiple: true
-  has_attributes :institutions, datastream: "properties", multiple: true
-  has_attributes :og_reference, datastream:"properties"
-  has_attributes :title, datastream: "DC"
-  has_attributes :description, datastream: "DC"
+  class_attribute :project_members, datastream: "properties", multiple: true
+  class_attribute :project_editors, datastream: "properties", multiple: true
+  class_attribute :project_admins, datastream: "properties", multiple: true
+  class_attribute :institutions, datastream: "properties", multiple: true
+  class_attribute :og_reference, datastream:"properties"
+  class_attribute :title, datastream: "DC"
+  class_attribute :description, datastream: "DC"
 
   validates_presence_of :title
 

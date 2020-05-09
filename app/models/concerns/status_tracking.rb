@@ -2,9 +2,9 @@ module StatusTracking
   extend ActiveSupport::Concern 
 
   included do 
-    has_attributes :upload_status, :upload_status_time, :stacktrace,
+    class_attribute :upload_status, :upload_status_time, :stacktrace,
       :datastream => :properties, :multiple => false  
-    has_attributes :errors_display, :errors_system, :datastream => :properties,
+    class_attribute :errors_display, :errors_system, :datastream => :properties,
       :multiple => true
   end
 
