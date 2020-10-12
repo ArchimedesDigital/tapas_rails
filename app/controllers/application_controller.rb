@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::Base
-
-
   helper Openseadragon::OpenseadragonHelper
 
   # def forem_user
@@ -47,6 +45,29 @@ class ApplicationController < ActionController::Base
 
   def create_response_object
     @response ||= {}
+  end
+
+  # FIXME: (charles) Do we actually need these helper methods? They're filling
+  # in for blacklight currently
+
+  helper_method :application_name
+  def application_name
+    "TAPAS"
+  end
+
+  helper_method :container_classes
+  def container_classes
+    @container_classes || ""
+  end
+
+  helper_method :render_body_class
+  def render_body_class
+    @body_class || ""
+  end
+
+  helper_method :render_page_title
+  def render_page_title
+    @page_title || "TAPAS"
   end
 
   helper_method :current_user_can?

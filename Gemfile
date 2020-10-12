@@ -32,8 +32,7 @@ group :test do
 end
 
 gem 'aws-sdk-s3', require: false
-gem 'blacklight-gallery'
-gem 'blacklight'
+gem 'bootstrap', '~> 4.5.2'
 gem 'cancancan'
 gem 'carrierwave', '~> 1.3.1'
 gem 'coffee-rails', '~> 5.0.0'
@@ -47,11 +46,11 @@ gem 'forty_facets'
 gem 'friendly_id', '~> 5.2.4' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'git'
 gem 'haml-rails', '~> 2.0'
-gem 'hydra-derivatives'
-gem 'hydra-head', '~> 10.0'
 gem 'jbuilder', '2.10'
 gem 'jquery-rails'
 gem 'json', '~> 2.3'
+gem 'mini_magick'
+gem 'mini_racer'
 gem 'mods_display', '~> 0.3'
 gem 'mysql2', '0.5.3'
 gem 'namae'
@@ -68,6 +67,6 @@ gem 'rubyzip'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'sprockets', '~> 3.7.2'
-gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
